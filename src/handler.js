@@ -1,5 +1,9 @@
 'use strict';
 
+if (!process.env.AWS_LAMBDA_FUNCTION_NAME) {
+  require('dotenv').config();
+}
+
 class GitHubClient {
   constructor({ token, owner, repo, branch, commitMessage }) {
     this.baseUrl = 'https://api.github.com';

@@ -1,6 +1,6 @@
 localstack_endpoint    = "http://localhost:4566"
 aws_region             = "us-west-1"
-cron_schedule          = "rate(1 minute)"
+cron_schedule          = "rate(0 */3 * * *)"
 github_owner           = "krasovsky22"
 github_repo            = "github-activity-tracker"
 github_branch          = "main"
