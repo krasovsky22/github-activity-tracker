@@ -1,7 +1,7 @@
 resource "aws_cloudwatch_event_rule" "cron" {
   name                = "${var.function_name}-schedule"
   schedule_expression = var.cron_schedule
-  is_enabled          = true
+  state               = "ENABLED"
 }
 
 resource "aws_cloudwatch_event_target" "lambda" {
