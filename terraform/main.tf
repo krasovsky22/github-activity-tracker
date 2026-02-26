@@ -12,6 +12,7 @@ resource "aws_lambda_function" "main" {
   runtime       = "nodejs20.x"
 
   source_code_hash = data.archive_file.lambda_zip.output_base64sha256
+  timeout          = 30
 
   environment {
     variables = {
