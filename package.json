@@ -1,0 +1,12 @@
+{
+  "name": "github-activity-tracker",
+  "version": "1.0.0",
+  "scripts": {
+    "local:up":     "docker-compose up -d",
+    "local:down":   "docker-compose down",
+    "local:deploy": "cd terraform && terraform init && terraform apply -var-file=local.tfvars -auto-approve",
+    "local:invoke": "aws --endpoint-url=http://localhost:4566 lambda invoke --function-name github-activity-tracker --payload '{}' /tmp/response.json && cat /tmp/response.json",
+    "local:logs":   "aws --endpoint-url=http://localhost:4566 logs tail /aws/lambda/github-activity-tracker --follow",
+    "local:run":    "node -e \"require('./src/handler').handler({}).then(console.log)\""
+  }
+}

@@ -1,0 +1,2 @@
+aws_region    = "us-west-1"
+cron_schedule = "cron(0 0 * * ? *)"
