@@ -15,7 +15,11 @@ resource "aws_lambda_function" "main" {
 
   environment {
     variables = {
-      CRON_SCHEDULE = var.cron_schedule
+      CRON_SCHEDULE          = var.cron_schedule
+      GITHUB_OWNER           = var.github_owner
+      GITHUB_REPO            = var.github_repo
+      GITHUB_BRANCH          = var.github_branch
+      GITHUB_TOKEN_SSM_PARAM = var.github_token_ssm_param
     }
   }
 

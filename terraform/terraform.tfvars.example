@@ -1,2 +1,6 @@
-aws_region    = "us-west-1"
-cron_schedule = "cron(0 0 * * ? *)"
+aws_region             = "us-west-1"
+cron_schedule          = "cron(0 0 * * ? *)"
+github_owner           = "krasovsky22"
+github_repo            = "github-activity-tracker"
+github_branch          = "main"
+github_token_ssm_param = "/github-activity-tracker/github-token"

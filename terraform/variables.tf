@@ -27,3 +27,26 @@ variable "log_retention_days" {
   type        = number
   default     = 14
 }
+
+variable "github_owner" {
+  description = "GitHub repository owner"
+  type        = string
+  default     = "krasovsky22"
+}
+
+variable "github_repo" {
+  description = "GitHub repository name"
+  type        = string
+}
+
+variable "github_branch" {
+  description = "Branch to push empty commits to"
+  type        = string
+  default     = "main"
+}
+
+variable "github_token_ssm_param" {
+  description = "SSM Parameter Store path for GitHub PAT (SecureString)"
+  type        = string
+  default     = "/github-activity-tracker/github-token"
+}
